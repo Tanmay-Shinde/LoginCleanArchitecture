@@ -38,8 +38,7 @@ public class SignupUseCaseFactory {
 
         UserFactory userFactory = new CommonUserFactory();
 
-        SignupInputBoundary userSignupInteractor = new SignupInteractor(
-                userDataAccessObject, signupOutputBoundary, userFactory);
+        SignupInputBoundary userSignupInteractor = new SignupInteractor(userDataAccessObject, signupOutputBoundary, userFactory);
 
         return new SignupController(userSignupInteractor);
     }
